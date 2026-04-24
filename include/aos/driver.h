@@ -60,6 +60,12 @@ uint64_t get_partition_info(uint64_t index, partition_info_t* pinfo);
 int64_t block_read(block_dev_t* dev, uint64_t lba, uint64_t count, void* buffer);
 int64_t block_write(block_dev_t* dev, uint64_t lba, uint64_t count, void* buffer);
 
+#define AOS_HANDLE_SUBTYPE_CHECK(st) do { \
+_Static_assert(__builtin_types_compatible_p(typeof(*(in)), message_t), "AOS_HANDLE_SUBTYPE_CHECK: 'in' must be message_t*"); \
+_Static_assert(__builtin_types_compatible_p(typeof(*(out)), message_t), "AOS_HANDLE_SUBTYPE_CHECK: 'out' must be message_t*"); \
+if (in->subtype != (st)) { out->param1 = DRV_ERR_NOCOMM; break; } \
+} while(0)
+
 #ifdef __cplusplus
 }
 #endif

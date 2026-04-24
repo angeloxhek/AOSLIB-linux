@@ -32,10 +32,13 @@ typedef struct message_t {
 } __attribute__((packed, aligned(8))) message_t;
 
 int64_t __ipc_recv(message_t* out_msg);
+int64_t ipc_tryrecv(message_t* out_msg);
 int64_t ipc_send(uint64_t dest_tid, message_t* msg);
+uint64_t get_ipc_count(void);
 void ipc_recv(message_t* out_msg);
 void ipc_recv_ex(uint64_t tid, msg_type_t type, msg_subtype_t subtype, message_t* out_msg);
-uint64_t get_ipc_count(void);
+void ipc_seek(int64_t offset, seek_whence_t whence);
+int ipc_get_at(uint64_t index, message_t* out);
 
 #ifdef __cplusplus
 }
