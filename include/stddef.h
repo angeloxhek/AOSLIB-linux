@@ -37,11 +37,6 @@
     #endif
 #endif
 
-/* 
- * 5. offsetof
- * Макрос возвращает смещение поля внутри структуры в байтах.
- * GCC имеет встроенную (безопасную) реализацию. Если её нет, используем классический хак.
- */
 #undef offsetof
 #ifdef __GNUC__
     #define offsetof(TYPE, MEMBER) __builtin_offsetof(TYPE, MEMBER)

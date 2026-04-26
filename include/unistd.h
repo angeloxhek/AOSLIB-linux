@@ -21,6 +21,8 @@ off_t lseek(int fd, off_t offset, int whence);
 int unlink(const char *pathname);
 void sleep(unsigned int seconds);
 
+pid_t fork(void);
+
 #ifdef __cplusplus
 }
 #endif

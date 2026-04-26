@@ -40,6 +40,8 @@ int64_t syscall(uint64_t nr, uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64
 void* syscall_sbrk(int64_t increment);
 void sysprint(const char* str);
 void thread_yield(void);
+int sysspawn(const char* path, startup_info_t* info);
+uint32_t sysfork(void);
 
 #ifdef __cplusplus
 }
