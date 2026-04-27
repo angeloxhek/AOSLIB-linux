@@ -35,6 +35,7 @@ extern "C" {
 #define SYS_GET_TIME_INFO            26
 #define SYS_SPAWN                    27
 #define SYS_FORK                     28
+#define SYS_EXEC                     29
 
 int64_t syscall(uint64_t nr, uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5);
 void* syscall_sbrk(int64_t increment);
@@ -42,6 +43,7 @@ void sysprint(const char* str);
 void thread_yield(void);
 int sysspawn(const char* path, startup_info_t* info);
 uint32_t sysfork(void);
+int sysexec(const char* path, startup_info_t* info, uint64_t arg2);
 
 #ifdef __cplusplus
 }

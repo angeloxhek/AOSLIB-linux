@@ -23,6 +23,8 @@ void sleep(unsigned int seconds);
 
 pid_t fork(void);
 
+int execve(const char *filename, char *const argv[], char *const envp[]);
+
 #ifdef __cplusplus
 }
 #endif

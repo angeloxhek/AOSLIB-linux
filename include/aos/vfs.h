@@ -62,6 +62,13 @@ typedef struct {
     uint32_t reserved;
 } vfs_dirent_t;
 
+typedef struct {
+	char name[256];
+    uint64_t inode_id;
+    uint64_t size_bytes;
+    uint32_t attributes;
+} vfs_stat_info_t;
+
 void vfs_init(void);
 int vfs_open(const char* path, uint32_t flags);
 int vfs_openat(int dir_fd, const char* name, uint32_t flags);
@@ -71,6 +78,7 @@ int vfs_write(int fd, const void* buf, int count);
 int vfs_readdir(int fd, vfs_dirent_t* out_entries, int max_entries);
 int vfs_flock(int fd, vfs_lock_type_t lock_type);
 int64_t vfs_seek(int fd, int64_t offset, vfs_seek_t whence);
+int vfs_stat(int fd, vfs_stat_info_t* out_stat);
 
 #ifdef __cplusplus
 }
