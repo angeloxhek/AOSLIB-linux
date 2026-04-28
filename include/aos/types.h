@@ -47,8 +47,8 @@ typedef struct {
 		struct {
 			void* reserved1;
 			void* reserved2;
-		};
-	};
+		} driver;
+	} data;
 } startup_info_t;
 
 typedef struct {
