@@ -14,14 +14,14 @@ extern "C" {
 #define VFS_FAPPEND (1 << 3)
 #define VFS_FTRUNC  (1 << 4)
 
-#define VFS_ERR_OK                   0
-#define VFS_ERR_NOFILE              -1
-#define VFS_ERR_SYMLINKLOOP         -2
-#define VFS_ERR_PERM                -3
-#define VFS_ERR_ISDIR               -4
-#define VFS_ERR_NOCOMM              -5
-#define VFS_ERR_BUSY                -6
-#define VFS_ERR_UNKNOWN            -99
+#define VFS_ERR_OK                 DRV_ERR_OK
+#define VFS_ERR_PERM                 -1
+#define VFS_ERR_ISDIR                -2
+#define VFS_ERR_BUSY                 -3
+#define VFS_ERR_SYMLINKLOOP          -4
+#define VFS_ERR_NOCOMM             DRV_ERR_NOCOMM
+#define VFS_ERR_NOTFOUND           DRV_ERR_NOTFOUND
+#define VFS_ERR_UNKNOWN            DRV_ERR_UNKNOWN
 
 typedef enum {
     VFS_CMD_OPEN  = 1,

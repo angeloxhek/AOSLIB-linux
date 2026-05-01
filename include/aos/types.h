@@ -24,6 +24,11 @@ extern "C" {
 #define STAT_NO_ENTRY              -257
 #define STAT_OOM                   -258
 
+#define DRV_ERR_OK                    0
+#define DRV_ERR_NOCOMM             -258
+#define DRV_ERR_NOTFOUND           -257
+#define DRV_ERR_UNKNOWN            -256
+
 typedef struct {
     uint64_t uptime;
     uint64_t boot_time;
