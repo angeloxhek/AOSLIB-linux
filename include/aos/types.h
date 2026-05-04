@@ -25,6 +25,7 @@ extern "C" {
 #define STAT_OOM                   -258
 
 #define DRV_ERR_OK                    0
+#define DRV_ERR_FOUND              -259
 #define DRV_ERR_NOCOMM             -258
 #define DRV_ERR_NOTFOUND           -257
 #define DRV_ERR_UNKNOWN            -256

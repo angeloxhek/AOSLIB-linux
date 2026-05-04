@@ -10,6 +10,7 @@ extern "C" {
 #define AUTH_ERR_OK                DRV_ERR_OK
 #define AUTH_ERR_USER                -1
 #define AUTH_ERR_DENIED              -2
+#define AUTH_ERR_FOUND             DRV_ERR_FOUND
 #define AUTH_ERR_NOCOMM            DRV_ERR_NOCOMM
 #define AUTH_ERR_NOTFOUND          DRV_ERR_NOTFOUND
 #define AUTH_ERR_UNKNOWN           DRV_ERR_UNKNOWN
