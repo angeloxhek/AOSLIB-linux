@@ -1,5 +1,6 @@
 #ifndef _STDIO_H
 #define _STDIO_H
+
 #include <stddef.h>
 
 #ifdef __cplusplus
@@ -14,13 +15,9 @@ extern FILE *stdin;
 extern FILE *stdout;
 extern FILE *stderr;
 
-#define SEEK_SET 1
-#define SEEK_CUR 2
-#define SEEK_END 3
-
-int printf(const char* format, ...);
-int snprintf(char* str, size_t size, const char* format, ...);
-int sprintf(char* str, const char* format, ...);
+#define SEEK_SET 0
+#define SEEK_CUR 1
+#define SEEK_END 2
 
 FILE *fopen(const char *filename, const char *mode);
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
@@ -41,4 +38,4 @@ int fputs(const char *s, FILE *stream);
 }
 #endif
 
-#endif
+#endif /* _STDIO_H */

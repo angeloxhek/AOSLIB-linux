@@ -1,0 +1,3 @@
+[submodule "aoslib"]
+	path = aoslib
+	url = https://github.com/angeloxhek/AOSLIB.git
